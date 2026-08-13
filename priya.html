@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FastTrack Courier</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+header {
+    display: flex;
+    justify-content: space-between;
+    background: #002244;
+    color: white;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 80px;
+    background: #ff6600;
+    color: white;
+}
+
+.btn {
+    background: white;
+    color: #ff6600;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+/* TRACKING */
+.tracking {
+    text-align: center;
+    padding: 50px;
+}
+
+.tracking input {
+    padding: 10px;
+    width: 200px;
+}
+
+.tracking button {
+    padding: 10px;
+    background: #002244;
+    color: white;
+    border: none;
+}
+
+/* SERVICES */
+.services {
+    text-align: center;
+    padding: 50px;
+    background: #f4f4f4;
+}
+
+.service-box {
+    display: inline-block;
+    width: 200px;
+    margin: 10px;
+    padding: 20px;
+    background: white;
+}
+
+/* ABOUT */
+.about {
+    padding: 50px;
+    text-align: center;
+}
+
+/* CONTACT */
+.contact {
+    padding: 50px;
+    text-align: center;
+}
+
+.contact input, .contact textarea {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 250px;
+}
+
+.contact button {
+    padding: 10px 20px;
+    background: #ff6600;
+    color: white;
+    border: none;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #002244;
+    color: white;
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <h2 class="logo">FastTrack</h2>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#tracking">Tracking</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+    <h1>Fast & Secure Courier Services</h1>
+    <p>Delivering your packages safely and on time</p>
+    <a href="#tracking" class="btn">Track Shipment</a>
+</section>
+
+<!-- TRACKING -->
+<section id="tracking" class="tracking">
+    <h2>Track Your Shipment</h2>
+    <input type="text" id="trackingId" placeholder="Enter Tracking ID">
+    <button onclick="trackShipment()">Track Now</button>
+    <p id="result"></p>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-box">
+        <h3>Express Delivery</h3>
+        <p>Fast delivery within 24 hours</p>
+    </div>
+    <div class="service-box">
+        <h3>International Shipping</h3>
+        <p>Ship worldwide with ease</p>
+    </div>
+    <div class="service-box">
+        <h3>Same Day Delivery</h3>
+        <p>Quick delivery within the same day</p>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+    <h2>About Us</h2>
+    <p>We are a trusted courier company with 5+ years experience delivering packages safely.</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form>
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Message"></textarea>
+        <button type="submit">Send</button>
+    </form>
+
+    <p>Email: support@fasttrack.com</p>
+    <p>Phone: 9876543210</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 FastTrack Courier</p>
+</footer>
+
+<script src="script.js">
+    function trackShipment() {
+    let id = document.getElementById("trackingId").value;
+    let result = document.getElementById("result");
+    alert("completed");
+
+    if (id === "ABC123") {
+        result.innerText = ("Status: Delivered");
+    } else if (id === "XYZ789") {
+        result.innerText = ("Status: Delivered");
+    } else if (id === "FAST001") {
+        result.innerText = ("Status: Delivered");
+    } else if (id === "ACB567")  {
+        result.innerText = ("Status: In Transist");
+    } else if (id === "ACB098")  {
+        result.innerText = ("Status: In Transist");
+    } else if (id === "CBR567")  {
+        result.innerText = ("Status: In Transist");
+    } else if (id === "FAST111") {
+        result.innerText = ("Status: Out for Delivery");
+    } else if (id === "FAST221") {
+        result.innerText = ("Status: Out for Delivery");
+    } else {
+        result.innerText = ("Invalid Tracking ID");
+    }
+}
+</script>
+</body>
+</html>
